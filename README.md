@@ -142,3 +142,23 @@ POST /incident
 ```http
 POST /restart/{pipeline_name}
 ```
+=============
+## n8n Workflow
+
+This project includes a sample n8n workflow demonstrating AI-based DataOps incident orchestration.
+
+Workflow steps:
+
+```text
+Webhook Trigger
+      ↓
+Pipeline Failure Event
+      ↓
+AI Root Cause Analysis
+      ↓
+Incident Generation
+      ↓
+Alert Dispatch
+```
+
+The workflow JSON can be imported into n8n for live execution.
