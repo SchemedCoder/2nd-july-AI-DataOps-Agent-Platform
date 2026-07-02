@@ -1,0 +1,5 @@
+incident_id,pipeline_name,severity,issue_type,status,created_at,resolved_at
+INC001,sales_pipeline,HIGH,SCHEMA_DRIFT,OPEN,2026-01-12 01:46:00,
+INC002,inventory_pipeline,MEDIUM,DUPLICATE_SPIKE,RESOLVED,2026-01-11 02:40:00,2026-01-11 03:10:00
+INC003,customer_pipeline,HIGH,NULL_SPIKE,OPEN,2026-01-11 03:55:00,
+INC004,payments_pipeline,CRITICAL,SLA_BREACH,OPEN,2026-01-12 05:32:00,
