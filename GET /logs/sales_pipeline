@@ -1,0 +1,7 @@
+[
+  {
+    "pipeline_name": "sales_pipeline",
+    "status": "FAILED",
+    "error_message": "Schema drift detected"
+  }
+]
