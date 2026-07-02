@@ -1,0 +1,60 @@
+{
+  "name": "AI DataOps Incident Workflow",
+  "nodes": [
+    {
+      "name": "Pipeline Failure Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "position": [200, 300],
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "pipeline-failure"
+      }
+    },
+    {
+      "name": "Mock Incident Data",
+      "type": "n8n-nodes-base.set",
+      "position": [450, 300],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "pipeline_name",
+              "value": "sales_pipeline"
+            },
+            {
+              "name": "status",
+              "value": "FAILED"
+            },
+            {
+              "name": "error",
+              "value": "Schema drift detected"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "AI Analysis",
+      "type": "n8n-nodes-base.code",
+      "position": [700, 300],
+      "parameters": {
+        "jsCode": "return [{json:{root_cause:'Schema Drift',severity:'HIGH',recommendation:'Update transformation logic'}}];"
+      }
+    },
+    {
+      "name": "Alert Output",
+      "type": "n8n-nodes-base.set",
+      "position": [950, 300],
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "alert",
+              "value": "Incident created and alert sent"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
