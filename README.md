@@ -162,3 +162,17 @@ Alert Dispatch
 ```
 
 The workflow JSON can be imported into n8n for live execution.
+
+===========
+
+## Run API
+
+```bash
+uvicorn api.main:app --reload
+```
+
+API:
+
+```text
+http://127.0.0.1:8000
+```
