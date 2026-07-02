@@ -1,0 +1,5 @@
+{
+  "pipeline_name":"sales_pipeline",
+  "issue_type":"SCHEMA_DRIFT",
+  "severity":"HIGH"
+}
