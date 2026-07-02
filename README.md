@@ -79,3 +79,66 @@ Useful for:
 - Analytics Engineering teams
 - Platform Engineering
 - FinTech / SaaS companies
+======================
+
+
+## Run Instruction/Local Setup
+
+Clone repository:
+
+```bash
+git clone https://github.com/yourusername/ai-dataops-agent-platform.git
+cd ai-dataops-agent-platform
+```
+
+Install dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+Run MCP server:
+
+```bash
+uvicorn mcp.server:app --reload
+```
+
+Server starts at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger UI:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+---
+
+## API Endpoints
+
+### Read Pipeline Logs
+
+```http
+GET /logs/{pipeline_name}
+```
+
+### Run SQL Checks
+
+```http
+GET /sql-checks
+```
+
+### Create Incident
+
+```http
+POST /incident
+```
+
+### Restart Pipeline
+
+```http
+POST /restart/{pipeline_name}
+```
