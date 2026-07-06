@@ -176,3 +176,15 @@ API:
 ```text
 http://127.0.0.1:8000
 ```
+## REST API Endpoints
+
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | `/` | API Health Check |
+| GET | `/logs/{pipeline_name}` | Retrieve pipeline execution logs |
+| GET | `/sql-checks` | Run warehouse data quality diagnostics |
+| POST | `/incident` | Create a new incident |
+| POST | `/restart/{pipeline_name}` | Trigger pipeline restart |
+| GET | `/incidents` | Retrieve all incidents |
+| GET | `/pipelines` | Retrieve pipeline execution history |
+| GET | `/metrics` | Retrieve warehouse metrics |
